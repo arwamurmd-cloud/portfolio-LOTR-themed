@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import map from "@/assets/map.png.asset.json";
-import ringMarker from "@/assets/ringmarker.png.asset.json";
+import ringMarker from "@/assets/ringmarker-cut.png.asset.json";
 import parchment from "@/assets/parchment.png.asset.json";
 
 type Project = {
