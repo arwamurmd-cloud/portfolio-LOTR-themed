@@ -33,7 +33,14 @@ export function About() {
           <motion.img
             src={gandalf.url}
             alt="Gandalf"
-            className="relative w-full drop-shadow-[0_0_40px_rgba(0,0,0,0.9)]"
+            className="relative w-full"
+            style={{
+              maskImage:
+                "radial-gradient(ellipse 65% 60% at 50% 48%, #000 55%, rgba(0,0,0,0.35) 80%, transparent 96%)",
+              WebkitMaskImage:
+                "radial-gradient(ellipse 65% 60% at 50% 48%, #000 55%, rgba(0,0,0,0.35) 80%, transparent 96%)",
+              filter: "contrast(1.05) brightness(0.95)",
+            }}
             initial={{ opacity: 0, x: -40 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 1.3 }}
