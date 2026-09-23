@@ -108,7 +108,8 @@ export function Projects() {
                     className="absolute top-full left-1/2 z-30 mt-3 w-64 -translate-x-1/2 rounded-sm border border-primary/40 p-5 sm:w-72"
                     style={{
                       backgroundImage: `url(${parchment.url})`,
-                      backgroundSize: "cover",
+                      backgroundSize: "auto 190%",
+                      backgroundPosition: "center",
                       boxShadow: "0 12px 50px -10px rgba(0,0,0,0.8)",
                     }}
                   >

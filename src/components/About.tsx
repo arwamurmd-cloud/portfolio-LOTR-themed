@@ -48,7 +48,7 @@ export function About() {
             className="relative overflow-hidden rounded-sm border border-primary/25 p-8 sm:p-12"
             style={{
               backgroundImage: `url(${parchment.url})`,
-              backgroundSize: "cover",
+              backgroundSize: "190% auto",
               backgroundPosition: "center",
               boxShadow: "0 0 90px -25px var(--gold)",
             }}
