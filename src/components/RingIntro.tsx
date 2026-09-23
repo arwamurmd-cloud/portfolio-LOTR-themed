@@ -51,13 +51,14 @@ function TheRing({ start }: { start: number }) {
 
     if (ash.current) {
       const d = Math.max(0, (t - 0.6) / 0.4);
-      const arr = ash.current.geometry.attributes.position.array as Float32Array;
+      const attr = ash.current.geometry.attributes["position"] as THREE.BufferAttribute;
+      const arr = attr.array as Float32Array;
       for (let i = 0; i < arr.length; i += 3) {
-        arr[i] = base[i] + dirs[i] * d * 3;
-        arr[i + 1] = base[i + 1] + dirs[i + 1] * d * 3.4;
-        arr[i + 2] = base[i + 2] + dirs[i + 2] * d * 3;
+        arr[i] = (base[i] ?? 0) + (dirs[i] ?? 0) * d * 3;
+        arr[i + 1] = (base[i + 1] ?? 0) + (dirs[i + 1] ?? 0) * d * 3.4;
+        arr[i + 2] = (base[i + 2] ?? 0) + (dirs[i + 2] ?? 0) * d * 3;
       }
-      ash.current.geometry.attributes.position.needsUpdate = true;
+      attr.needsUpdate = true;
       const m = ash.current.material as THREE.PointsMaterial;
       m.opacity = d <= 0 ? 0 : Math.max(0, 1 - d) * 0.9;
     }
